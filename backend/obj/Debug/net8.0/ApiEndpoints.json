@@ -1,0 +1,312 @@
+[
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "PROYECTO_GYM_MASTER.DTOs.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "PROYECTO_GYM_MASTER.DTOs.RegisterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChatbotController",
+    "Method": "Chat",
+    "RelativePath": "api/Chatbot",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "PROYECTO_GYM_MASTER.DTOs.ChatDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.ProgresoApiController",
+    "Method": "GetAll",
+    "RelativePath": "api/progreso",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.ProgresoApiController",
+    "Method": "Create",
+    "RelativePath": "api/progreso",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "PROYECTO_GYM_MASTER.DTOs.CrearProgresoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.ProgresoApiController",
+    "Method": "Delete",
+    "RelativePath": "api/progreso/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.ProgresoApiController",
+    "Method": "GetMiProgreso",
+    "RelativePath": "api/progreso/mio",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.ProgresoApiController",
+    "Method": "GetByUsuario",
+    "RelativePath": "api/progreso/usuario/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.RutinaController",
+    "Method": "GetAll",
+    "RelativePath": "api/rutinas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.RutinaController",
+    "Method": "Create",
+    "RelativePath": "api/rutinas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "PROYECTO_GYM_MASTER.DTOs.RutinaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.RutinaController",
+    "Method": "GetById",
+    "RelativePath": "api/rutinas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.RutinaController",
+    "Method": "Update",
+    "RelativePath": "api/rutinas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "PROYECTO_GYM_MASTER.DTOs.EditarRutinaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.RutinaController",
+    "Method": "Delete",
+    "RelativePath": "api/rutinas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.RutinaController",
+    "Method": "Asignar",
+    "RelativePath": "api/rutinas/asignar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "PROYECTO_GYM_MASTER.DTOs.AsignarRutinaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.RutinaController",
+    "Method": "GetMiRutina",
+    "RelativePath": "api/rutinas/mi-rutina",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.UsuarioController",
+    "Method": "GetAll",
+    "RelativePath": "api/usuarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.UsuarioController",
+    "Method": "GetById",
+    "RelativePath": "api/usuarios/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.UsuarioController",
+    "Method": "Update",
+    "RelativePath": "api/usuarios/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "PROYECTO_GYM_MASTER.DTOs.EditarUsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.UsuarioController",
+    "Method": "Delete",
+    "RelativePath": "api/usuarios/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.UsuarioController",
+    "Method": "GetClientes",
+    "RelativePath": "api/usuarios/clientes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PROYECTO_GYM_MASTER.Controllers.UsuarioController",
+    "Method": "UpdatePerfil",
+    "RelativePath": "api/usuarios/perfil",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "PROYECTO_GYM_MASTER.DTOs.EditarPerfilDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

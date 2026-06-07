@@ -1,0 +1,6 @@
+@PROYECTO_GYM_MASTER_HostAddress = http://localhost:5094
+
+GET {{PROYECTO_GYM_MASTER_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
