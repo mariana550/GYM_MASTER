@@ -1,6 +1,5 @@
     {
-    "buildCommand": "ng build --output-path=dist",
-    "outputDirectory": "dist/browser",
+    "outputDirectory": "dist/gym-frontend",
     "rewrites": [
         { "source": "/(.*)", "destination": "/index.html" }
     ]
