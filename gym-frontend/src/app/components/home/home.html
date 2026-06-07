@@ -1,0 +1,150 @@
+    <!-- NAVBAR -->
+    <nav class="gym-navbar d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-2">
+        <span style="color:#88c527; font-size:1.8rem;">⚡</span>
+        <span class="fw-black text-white fs-4 letter-spacing-1">GYM MASTER</span>
+    </div>
+    <div class="d-flex align-items-center gap-4">
+        <a href="#servicios" class="text-white text-decoration-none fw-semibold">Servicios</a>
+        <a href="#planes" class="text-white text-decoration-none fw-semibold">Planes</a>
+        <a href="#contacto" class="text-white text-decoration-none fw-semibold">Contacto</a>
+        <a routerLink="/login" class="btn btn-outline-verde">Iniciar Sesión</a>
+        <a routerLink="/register" class="btn btn-verde">Regístrate Ahora</a>
+    </div>
+    </nav>
+    <!-- HERO -->
+    <section class="hero">
+    <div class="container">
+        <div class="col-md-7 text-white text-center">
+        <p class="text-uppercase fw-bold mb-2" style="color:#88c527; letter-spacing:4px;">Bienvenido a GymMaster</p>
+        <h1 class="display-3 fw-black lh-1 mb-4">
+            TU MEJOR<br>VERSIÓN<br>
+            <span style="color:#88c527;">COMIENZA AQUÍ</span>
+        </h1>
+        <p class="fs-5 mb-5" style="color:#d5d5d3;">
+            Entrena tu cuerpo, fortalece tu mente y supera tus límites con entrenadores certificados.
+        </p>
+        <div class="d-flex gap-3 text-center justify-content-center">
+            <a routerLink="/register" class="btn btn-verde btn-lg px-5 py-3"> ÚNETE AHORA </a>
+            <a href="#servicios" class="btn btn-outline-verde btn-lg px-5 py-3"> Ver Servicios </a>
+        </div>
+        </div>
+    </div>
+    </section>
+    <!-- SERVICIOS -->
+    <section id="servicios" class="py-5" style="background:#f8f8f8;">
+    <div class="container">
+        <div class="text-center mb-5">
+        <p class="fw-bold text-uppercase" style="color:#88c527; letter-spacing:3px;">Lo que ofrecemos</p>
+        <h2 class="fw-black display-6"> NUESTROS SERVICIOS</h2>
+        </div>
+        <div class="row g-5">
+        <div class="col-md-3">
+            <div class="card servicios-card p-5 h-100 text-center shadow-sm mx-4">
+            <div style="font-size:2.5rem;">🏋️</div>
+            <h5 class="fw-bold mt-3">ENTRENAMIENTO PERSONALIZADO</h5>
+            <p class="text-muted small">Rutinas diseñadas específicamente para tus objetivos.</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card servicios-card p-5 h-100 text-center shadow-sm mx-4">
+            <div style="font-size:2.5rem;">❤️</div>
+            <h5 class="fw-bold mt-3">MEJORA TU SALUD</h5>
+            <p class="text-muted small">Seguimiento médico y nutricional especializado.</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card servicios-card p-5 h-100 text-center shadow-sm mx-4">
+            <div style="font-size:2.5rem;">💪</div>
+            <h5 class="fw-bold mt-3">AUMENTA TU FUERZA</h5>
+            <p class="text-muted small">Programas de fuerza y acondicionamiento físico.</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card servicios-card p-5 h-100 text-center shadow-sm mx-4">
+            <div style="font-size:2.5rem;">🎯</div>
+            <h5 class="fw-bold mt-3"> ALCANZA TUS OBJETIVOS </h5>
+            <p class="text-muted small"> Metas claras y seguimiento semanal de tu progreso.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- PLANES -->
+    <section id="planes" class="py-5" style="background:#000;">
+    <div class="container">
+        <div class="text-center mb-5">
+        <p class="fw-bold text-uppercase" style="color:#88c527; letter-spacing:3px;">Elige tu plan</p>
+        <h2 class="fw-black display-6 text-white">PLANES Y PRECIOS</h2>
+        </div>
+        <div class="row g-4 justify-content-center align-items-center">
+        <div class="col-md-3">
+            <div class="plan-card p-4 text-center" style="background:#1a1a1a;">
+            <h4 class="fw-black text-white">BÁSICO</h4>
+            <div class="my-3" style="color:#d5d5d3;">
+                <p>✓ Acceso al gym</p>
+                <p>✓ Rutina básica</p>
+                <p>✓ Seguimiento mensual</p>
+            </div>
+            <div class="display-5 fw-black" style="color:#88c527;">
+                $XX<small class="fs-6 text-white">/mes</small>
+            </div>
+            <a routerLink="/register" class="btn btn-outline-verde mt-3 w-100">ELEGIR PLAN</a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="plan-card popular p-4 text-center" style="background:#1a1a1a;">
+            <span class="badge mb-2 px-3 py-2 fw-bold" style="background:#88c527; color:#000;">MÁS POPULAR</span>
+            <h4 class="fw-black text-white">PREMIUM</h4>
+            <div class="my-3" style="color:#d5d5d3;">
+                <p>✓ Todo lo básico</p>
+                <p>✓ Entrenador personal</p>
+                <p>✓ Seguimiento semanal</p>
+            </div>
+            <div class="display-5 fw-black" style="color:#88c527;">
+                $XX<small class="fs-6 text-white">/mes</small>
+            </div>
+            <a routerLink="/register" class="btn btn-verde mt-3 w-100">ELEGIR PLAN</a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="plan-card p-4 text-center" style="background:#1a1a1a;">
+            <h4 class="fw-black text-white">VIP</h4>
+            <div class="my-3" style="color:#d5d5d3;">
+                <p>✓ Todo lo premium</p>
+                <p>✓ Nutricionista</p>
+                <p>✓ Seguimiento diario</p>
+            </div>
+            <div class="display-5 fw-black" style="color:#88c527;">
+                $XX<small class="fs-6 text-white">/mes</small>
+            </div>
+            <a routerLink="/register" class="btn btn-outline-verde mt-3 w-100">ELEGIR PLAN</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contacto" style="background:#000; border-top: 2px solid #88c527;" class="py-4">
+    <div class="container">
+        <div class="row text-center g-3" style="color:#d5d5d3;">
+        <div class="col-md-3">
+            <span style="color:#88c527;">📍</span> Dirección del Gym
+        </div>
+        <div class="col-md-3">
+            <span style="color:#88c527;">🕐</span> Lun-Sáb 5am - 10pm
+        </div>
+        <div class="col-md-3">
+            <span style="color:#88c527;">✉️</span> info&#64;gymmaster.com
+        </div>
+        <div class="col-md-3">
+            <span style="color:#88c527; font-size:1.3rem;">📸 📘 🎵</span>
+        </div>
+        </div>
+        <div class="text-center mt-3" style="color:#656563;">
+        © 2024 GymMaster. Todos los derechos reservados.
+        </div>
+    </div>
+    </footer>

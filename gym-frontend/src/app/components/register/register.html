@@ -1,0 +1,72 @@
+    <div class="min-vh-100 d-flex" style="background:#000;">
+
+    <!-- Lado izquierdo imagen -->
+    <div class="d-none d-md-flex col-md-6 align-items-center justify-content-center flex-column"
+        style="background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1600') center/cover;">
+        <h1 class="fw-black text-white display-4 text-center lh-1">
+        ÚNETE A<br>
+        <span style="color:#88c527;"> GYM MASTER </span>
+        </h1>
+        <p class="mt-3 text-center fs-5" style="color:#d5d5d3;">
+        El primer paso hacia tu mejor versión.
+        </p>
+    </div>
+
+    <!-- Lado derecho formulario -->
+    <div class="col-12 col-md-6 d-flex align-items-center justify-content-center p-4">
+        <div style="width:100%; max-width:420px;">
+
+        <div class="text-center mb-4">
+            <span style="color:#88c527; font-size:3rem; ">⚡</span>
+            <h2 class="fw-black text-white mt-2">Crear cuenta</h2>
+            <p style="color:#656563;">Únete a GymMaster hoy</p>
+        </div>
+
+        <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold text-white">Nombre completo</label>
+            <input type="text" class="form-control gym-input" [(ngModel)]="nombre"
+            placeholder="Tu nombre completo" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold text-white">Email</label>
+            <input type="email" class="form-control gym-input" [(ngModel)]="email"
+            placeholder="tu@email.com" />
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label fw-semibold text-white">Contraseña</label>
+            <input type="password" class="form-control gym-input" [(ngModel)]="password"
+            placeholder="Mínimo 6 caracteres" />
+        </div>
+
+<div class="mb-4">
+    <label class="form-label fw-semibold text-white">Rol</label>
+    <select class="form-select gym-input" [(ngModel)]="rol">
+    <option value="Cliente">Cliente</option>
+    <option value="Entrenador">Entrenador</option>
+    </select>
+</div>  
+
+        <button class="btn w-100 fw-bold py-3 btn-verde" (click)="register()" [disabled]="cargando">
+            <span *ngIf="cargando" class="spinner-border spinner-border-sm me-2"></span>
+            {{ cargando ? 'Registrando...' : 'CREAR CUENTA' }}
+        </button>
+
+        <hr class="my-4" style="border-color:#656563;">
+
+        <p class="text-center mb-2" style="color:#d5d5d3;">
+            ¿Ya tienes cuenta?
+            <a routerLink="/login" style="color:#88c527;" class="fw-bold text-decoration-none">Inicia sesión</a>
+        </p>
+
+        <p class="text-center">
+            <a routerLink="/" style="color:#656563;" class="text-decoration-none small">← Volver al inicio</a>
+        </p>
+
+        </div>
+    </div>
+    </div>

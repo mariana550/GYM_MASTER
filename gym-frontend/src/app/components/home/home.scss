@@ -1,0 +1,68 @@
+    :root {
+    --negro: #000000;
+    --gris-claro: #d5d5d3;
+    --verde: #88c527;
+    --gris-medio: #656563;
+    }
+
+    * { 
+        margin: 0; 
+        padding: 0;
+        box-sizing: border-box; 
+    }
+    // NAVBAR
+    .gym-navbar {
+    background: #000000;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #88c527;
+    }
+    // HERO
+    .hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    }
+    // SERVICIOS
+    .servicios-card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s;
+    border-top: 4px solid #88c527;
+    &:hover { transform: translateY(-6px); }
+    }
+    // PLANES
+    .plan-card {
+    border-radius: 16px;
+    border: 2px solid #d5d5d3;
+    transition: all 0.2s;
+    &.popular {
+        border: 3px solid #88c527;
+        transform: scale(1.05);
+    }
+    &:hover { box-shadow: 0 8px 30px rgba(136,197,39,0.2); }
+    }
+    .btn-verde {
+    background: #88c527;
+    color: #000;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    box-shadow: 0 4px 15px rgba(136,197,39,0.3);
+    &:hover { background: #76ad20; color: #000; }
+    }
+
+    .btn-outline-verde {
+    border: 2px solid #88c527;
+    color: #88c527;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 10px 28px;
+    background: transparent;
+    &:hover { background: #88c527; color: #000; }
+    }

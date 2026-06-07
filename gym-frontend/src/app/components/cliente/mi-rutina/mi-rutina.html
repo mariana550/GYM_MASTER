@@ -1,0 +1,74 @@
+        <div class="container-fluid py-4 px-4" style="background:#f5f5f5; min-height:100vh;">
+    <div class="mb-4">
+        <h2 class="fw-black mb-0">📋 Mi Rutina</h2>
+        <p class="text-muted">Rutina asignada por tu entrenador</p>
+    </div>
+
+    <div *ngIf="cargando" class="text-center py-5">
+        <div class="spinner-border" style="color:#88c527;"></div>
+    </div>
+
+    <!-- Sin rutina -->
+    <div *ngIf="!cargando && rutina === null" class="text-center py-5">
+        <div style="font-size:5rem;">🏋️</div>
+        <h4 class="fw-bold mt-3">Aún no tienes una rutina asignada</h4>
+        <p class="text-muted">Tu entrenador te asignará una rutina pronto.</p>
+    </div>
+
+    <!-- Con rutina -->
+    <div *ngIf="!cargando && rutina !== null">
+        <div class="card border-0 shadow-sm mb-4" style="border-radius:16px; border-left:6px solid #88c527;">
+        <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+            <div>
+                <h3 class="fw-black mb-1">{{ rutina!.nombre }}</h3>
+                <p class="text-muted mb-0">Entrenador: <strong>{{ rutina!.nombreEntrenador }}</strong></p>
+            </div>
+            <span class="badge px-3 py-2 fw-bold" style="background:#88c527; color:#000; font-size:1rem;">
+                {{ rutina!.objetivo }}
+            </span>
+            </div>
+            <hr>
+            <div class="row g-3">
+            <div class="col-md-4">
+                <div class="text-center p-3 rounded" style="background:#f0f9e8;">
+                <div style="font-size:2rem;">📅</div>
+                <div class="fw-black mt-2" style="color:#88c527; font-size:1.5rem;">{{ rutina!.duracionSemanas }}</div>
+                <div class="text-muted small">semanas</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center p-3 rounded" style="background:#f0f9e8;">
+                <div style="font-size:2rem;">🎯</div>
+                <div class="fw-black mt-2" style="font-size:1.1rem;">{{ rutina!.objetivo }}</div>
+                <div class="text-muted small">objetivo</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center p-3 rounded" style="background:#f0f9e8;">
+                <div style="font-size:2rem;">📋</div>
+                <div class="fw-black mt-2" style="font-size:1.1rem;">{{ rutina!.fechaCreacion | date:'dd/MM/yyyy' }}</div>
+                <div class="text-muted small">fecha creación</div>
+                </div>
+            </div>
+            </div>
+            <div class="mt-4" *ngIf="rutina!.descripcion">
+            <h5 class="fw-bold">📝 Descripción</h5>
+            <p class="text-muted">{{ rutina!.descripcion }}</p>
+            </div>
+        </div>
+        </div>
+
+        <!-- Motivación -->
+        <div class="card border-0 shadow-sm" style="border-radius:16px; background:#000;">
+        <div class="card-body p-4 text-center">
+            <div style="font-size:3rem;">💪</div>
+            <h4 class="fw-black text-white mt-2">¡Tú puedes!</h4>
+            <p style="color:#d5d5d3;">Sigue tu rutina con disciplina y verás resultados increíbles.</p>
+            <span class="badge px-4 py-2 fw-bold" style="background:#88c527; color:#000; font-size:1rem;">
+            {{ rutina!.duracionSemanas }} semanas de entrenamiento
+            </span>
+        </div>
+        </div>
+    </div>
+    </div>

@@ -1,0 +1,116 @@
+    .chat-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background: #88c527;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 20px rgba(136, 197, 39, 0.4);
+    transition: transform 0.2s;
+
+    &:hover { transform: scale(1.1); }
+    }
+    .chat-window {
+    position: fixed;
+    bottom: 6rem;
+    right: 2rem;
+    width: 250px;
+    height: 380px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    z-index: 9998;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #88c527;
+    }
+
+    .chat-header {
+    background: #000;
+    color: white;
+    padding: 1rem 1.2rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .online {
+        color: #88c527;
+        font-size: 0.8rem;
+    }
+    }
+    .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    .mensaje {
+        max-width: 80%;
+        padding: 0.7rem 1rem;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        line-height: 1.4;
+
+        &.bot {
+        background: #f0f9e8;
+        border: 1px solid #88c527;
+        align-self: flex-start;
+        border-bottom-left-radius: 4px;
+        }
+
+        &.user {
+        background: #0d0d0d;
+        color: #88c527;
+        align-self: flex-end;
+        border-bottom-right-radius: 4px;
+        }
+    }
+
+    .typing {
+        color: #88c527;
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+    }
+    }
+
+    .chat-input {
+    display: flex;
+    border-top: 1px solid #eee;
+    padding: 0.8rem;
+    gap: 0.5rem;
+
+    input {
+        flex: 1;
+        border: 1px solid #d5d5d3;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        outline: none;
+
+        &:focus { border-color: #88c527; }
+    }
+
+    button {
+        background: #88c527;
+        color: #000;
+        border: none;
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.2s;
+
+        &:hover { background: #76ad20; }
+        &:disabled { background: #d5d5d3; }
+    }
+    }

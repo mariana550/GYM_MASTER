@@ -1,0 +1,35 @@
+    <!-- Botón flotante -->
+    <div class="chat-btn" (click)="toggle()">
+    <span *ngIf="!abierto"> 🤖 </span>
+    <span *ngIf="abierto">✕</span>
+    </div>
+
+    <!-- Ventana del chat -->
+    <div class="chat-window" *ngIf="abierto">
+    <div class="chat-header">
+        <span>⚡ Asistente GymMaster</span>
+        <span class="online"> ● En línea </span>
+    </div>
+
+    <div class="chat-messages" #scrollMe>
+        <div *ngFor="let m of mensajes"
+        class="mensaje"
+        [class.bot]="m.rol === 'bot'"
+        [class.user]="m.rol === 'user'">
+        {{ m.texto }}
+        </div>
+        <div *ngIf="cargando" class="mensaje bot">
+        <span class="typing"> ● ● ● </span>
+        </div>
+    </div>
+
+    <div class="chat-input">
+        <input
+        type="text"
+        [(ngModel)]="mensaje"
+        (keydown)="onEnter($event)"
+        placeholder="Escribe tu pregunta..."
+        [disabled]="cargando" />
+        <button (click)="enviar()" [disabled]="cargando"> ✓ </button>
+    </div>
+    </div>

@@ -1,0 +1,56 @@
+        <div class="min-vh-100 d-flex" style="background:#000;">
+
+    <!-- Lado izquierdo -->
+    <div class="d-none d-md-flex col-md-6 align-items-center justify-content-center flex-column"
+        style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600') center/cover;">
+        <h1 class="fw-black text-white display-4 text-center lh-1">
+        TU MEJOR<br>VERSIÓN<br>
+        <span style="color:#88c527;">EMPIEZA HOY</span>
+        </h1>
+        <p class="mt-3 text-center" style="color:#d5d5d3;">Entrena, progresa y supera tus límites.</p>
+    </div>
+
+    <!-- Lado derecho -->
+    <div class="col-12 col-md-6 d-flex align-items-center justify-content-center p-4">
+        <div style="width:100%; max-width:420px;">
+
+        <div class="text-center mb-4">
+            <span style="color:#88c527; font-size:3rem;">⚡</span>
+            <h2 class="fw-black text-white mt-2">GYM MASTER</h2>
+            <p style="color:#656563;">Inicia sesión en tu cuenta</p>
+        </div>
+
+        <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold text-white">Email</label>
+            <input type="email" class="form-control gym-input" [(ngModel)]="email"
+            placeholder="tu@email.com" />
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label fw-semibold text-white">Contraseña</label>
+            <input type="password" class="form-control gym-input" [(ngModel)]="password"
+            placeholder="••••••••" />
+        </div>
+
+        <button class="btn w-100 fw-bold py-3 btn-verde" (click)="login()" [disabled]="cargando">
+            <span *ngIf="cargando" class="spinner-border spinner-border-sm me-2"></span>
+            {{ cargando ? 'Ingresando...' : 'INICIAR SESIÓN' }}
+        </button>
+
+        <hr class="my-4" style="border-color:#656563;">
+
+        <p class="text-center mb-0" style="color:#d5d5d3;">
+            ¿No tienes cuenta?
+            <a routerLink="/register" style="color:#88c527;" class="fw-bold text-decoration-none">Regístrate</a>
+        </p>
+
+        <p class="text-center mt-2" style="color:#656563;">
+            <a routerLink="/" style="color:#656563;" class="text-decoration-none">← Volver al inicio</a>
+        </p>
+
+        </div>
+    </div>
+    </div>

@@ -1,0 +1,26 @@
+    .gym-input {
+    background: #1a1a1a;
+    border: 1px solid #656563;
+    color: white;
+    border-radius: 8px;
+    padding: 12px 16px;
+
+    &::placeholder { color: #656563; }
+
+    &:focus {
+        background: #1a1a1a;
+        border-color: #88c527;
+        box-shadow: 0 0 0 0.2rem rgba(136, 197, 39, 0.2);
+        color: white;
+    }
+    }
+
+    .btn-verde {
+    background: #88c527;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    &:hover { background: #76ad20; color: #000; }
+    &:disabled { background: #656563; }
+    }

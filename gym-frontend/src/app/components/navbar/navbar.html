@@ -1,0 +1,91 @@
+    <nav class="navbar navbar-expand-lg navbar-dark px-4 sticky-top" 
+        style="background:#000; border-bottom:2px solid #88c527;" *ngIf="loggedIn">
+
+    <!-- Logo -->
+    <a class="navbar-brand fw-black" href="#">
+        <span style="color:#88c527;">⚡</span>
+        <span class="text-white ms-1">GYM MASTER</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto gap-1">
+
+        <!-- Admin -->
+        <ng-container *ngIf="rol === 'Admin'">
+            <li class="nav-item">
+            <a class="nav-link px-3 py-2 rounded fw-semibold" routerLink="/admin/dashboard"
+                style="color:#d5d5d3;" routerLinkActive="active-link">
+                📊 Dashboard
+            </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link px-3 py-2 rounded fw-semibold" routerLink="/admin/usuarios"
+                style="color:#d5d5d3;" routerLinkActive="active-link">
+                👥 Usuarios
+            </a>
+            </li>
+        </ng-container>
+
+        <!-- Entrenador -->
+        <ng-container *ngIf="rol === 'Entrenador'">
+            <li class="nav-item">
+            <a class="nav-link px-3 py-2 rounded fw-semibold" routerLink="/entrenador/dashboard"
+                style="color:#d5d5d3;" routerLinkActive="active-link">
+                📊 Dashboard
+            </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link px-3 py-2 rounded fw-semibold" routerLink="/entrenador/rutinas"
+                style="color:#d5d5d3;" routerLinkActive="active-link">
+                📋 Rutinas
+            </a>
+            </li>
+        </ng-container>
+
+        <!-- Cliente -->
+        <ng-container *ngIf="rol === 'Cliente'">
+            <li class="nav-item">
+            <a class="nav-link px-3 py-2 rounded fw-semibold" routerLink="/cliente/dashboard"
+                style="color:#d5d5d3;" routerLinkActive="active-link">
+                📊 Dashboard
+            </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link px-3 py-2 rounded fw-semibold" routerLink="/cliente/mi-rutina"
+                style="color:#d5d5d3;" routerLinkActive="active-link">
+                📋 Mi Rutina
+            </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link px-3 py-2 rounded fw-semibold" routerLink="/cliente/mi-progreso"
+                style="color:#d5d5d3;" routerLinkActive="active-link">
+                📈 Mi Progreso
+            </a>
+            </li>
+        </ng-container>
+
+        </ul>
+
+        <!-- Usuario y logout -->
+        <ul class="navbar-nav ms-auto align-items-center gap-2">
+        <li class="nav-item">
+            <div class="px-3 py-2 rounded fw-bold"
+            style="background:#1a1a1a; border:1px solid #88c527; color:#88c527;">
+            👤 {{ nombre }}
+            <span class="ms-2 badge" style="background:#88c527; color:#000;">{{ rol }}</span>
+            </div>
+        </li>
+        <li class="nav-item">
+            <button class="btn fw-bold px-3 py-2"
+            style="background:transparent; border:2px solid #88c527; color:#88c527; border-radius:8px;"
+            (click)="logout()">
+            Cerrar sesión →
+            </button>
+        </li>
+        </ul>
+    </div>
+    </nav>
