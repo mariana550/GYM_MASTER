@@ -1,0 +1,15 @@
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+EXPOSE 8080
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["PROYECTO GYM MASTER.csproj", "./"]
+RUN dotnet restore "PROYECTO GYM MASTER.csproj"
+COPY . .
+RUN dotnet publish "PROYECTO GYM MASTER.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=build /app/publish .
+ENTRYPOINT ["dotnet", "PROYECTO_GYM_MASTER.dll"]
