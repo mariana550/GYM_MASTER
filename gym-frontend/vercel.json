@@ -1,21 +1,7 @@
     {
-    "version": 2,
-    "routes": [
-        {
-        "src": "/assets/(.*)",
-        "dest": "/assets/$1"
-        },
-        {
-        "src": "/(.*\\.js)",
-        "dest": "/$1"
-        },
-        {
-        "src": "/(.*\\.css)",
-        "dest": "/$1"
-        },
-        {
-        "src": "/(.*)",
-        "dest": "/index.html"
-        }
+    "buildCommand": "ng build --output-path=dist",
+    "outputDirectory": "dist/browser",
+    "rewrites": [
+        { "source": "/(.*)", "destination": "/index.html" }
     ]
     }
