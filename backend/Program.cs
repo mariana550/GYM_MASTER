@@ -70,9 +70,13 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngular", policy =>
     {
-        policy.WithOrigins("http://localhost:4200")
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        policy.WithOrigins(
+            "http://localhost:4200",
+            "https://gym-master-pi.vercel.app",    
+            "https://gym-master-4ufxo87a6-gymm-s-projects.vercel.app"
+        )
+            .AllowAnyHeader()
+            .AllowAnyMethod();
     });
 });
 
