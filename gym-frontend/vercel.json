@@ -1,6 +1,6 @@
-    {
-    "outputDirectory": "dist/gym-frontend",
-    "rewrites": [
-        { "source": "/(.*)", "destination": "/index.html" }
-    ]
-    }
+            {
+        "outputDirectory": "dist/gym-frontend/browser",
+        "rewrites": [
+            { "source": "/(.*)", "destination": "/index.html" }
+        ]
+        }
