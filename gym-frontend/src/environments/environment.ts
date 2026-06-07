@@ -1,4 +1,4 @@
     export const environment = {
     production: false as boolean,
-    apiUrl: 'https://localhost:7026/api' as string
+    apiUrl: 'https://gymmaster-production-bec6.up.railway.app/api' as string
     };
