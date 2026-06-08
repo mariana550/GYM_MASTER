@@ -10,11 +10,13 @@ using PROYECTO_GYM_MASTER.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // ── Base de datos ──────────────────────────────────────────
-var connectionString = Environment.GetEnvironmentVariable("ConnectionStrings__DefaultConnection") 
-    ?? builder.Configuration.GetConnectionString("DefaultConnection");
-
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(connectionString));
+    options.UseNpgsql(
+    $"Host={Environment.GetEnvironmentVariable("PGHOST")};
+    Database={Environment.GetEnvironmentVariable("PGDATABASE")};
+    Username={Environment.GetEnvironmentVariable("PGUSER")};
+    Password={Environment.GetEnvironmentVariable("PGPASSWORD")};
+    Port={Environment.GetEnvironmentVariable("PGPORT")}"));
 
 // ── JWT Authentication ─────────────────────────────────────
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
